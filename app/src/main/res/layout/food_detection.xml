@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="FoodDetection">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/recipe_search"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/recipe_search">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/tv_placeholder"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:padding="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:backgroundTint="@android:color/transparent"
+        />
+
+
+    <Button
+        android:id="@+id/recipe_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for recipes"
+        android:visibility="invisible"
+        android:backgroundTint="#249dd1"
+        android:layout_above="@+id/select_text"
+        android:layout_centerHorizontal="true">
+    </Button>
+
+    <TextView
+        android:id="@+id/select_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llSampleImage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/tv_description" />
+
+    <LinearLayout
+        android:id="@+id/llSampleImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/captureImageFab"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgSampleOne"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tomato" />
+
+        <ImageView
+            android:id="@+id/imgSampleTwo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onion" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/captureImageFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="16dp"
+        android:drawableLeft="@drawable/ic_camera"
+        android:text="@string/tv_take_photo"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
