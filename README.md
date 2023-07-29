@@ -9,7 +9,7 @@
 &nbsp;
 &nbsp;
 &nbsp;
-### After chosen or taken by camera, if a vegetable exist in the picture a rectangle line will be drawn around the vegetable as shown**
+### After chosen or taken by camera, if a vegetable exist in the picture a rectangle line will be drawn around the vegetable as shown
 <img src="https://github.com/sameeroz/Vegetables_Detector_with_recipe_finder_android_app/assets/90834112/831ac8ec-ebb7-45df-a76f-328ea08bcc49" width="300" />.
 &nbsp;
 &nbsp;
