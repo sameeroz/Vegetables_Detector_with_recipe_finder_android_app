@@ -5,7 +5,7 @@
 # Screenshots
 &nbsp;
 ### First choose a picture or take a picture
-![Screenshot_20230729_035519](https://github.com/sameeroz/Vegetables_Detector_with_recipe_finder_android_app/assets/90834112/172a6f96-b483-4693-98f3-0bb7cad87287)
+<img src="https://github.com/sameeroz/Vegetables_Detector_with_recipe_finder_android_app/assets/90834112/172a6f96-b483-4693-98f3-0bb7cad87287" width="200" />
 &nbsp;
 &nbsp;
 &nbsp;
