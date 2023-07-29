@@ -49,12 +49,10 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
     FrameLayout frameLayout;
     ProgressBar progressBar;
     ImageView inputImageView;
-    TextView pageTitle;
     ImageView imgSampleOne, imgSampleTwo;
     Button captureImageFab, recipeSearch;
     List<DetectionResult> detectionResults = new ArrayList<>();
     List<String> foodIngredients;
-    int time = 3;
 
     private static final int pic_id = 123;
 
@@ -64,7 +62,6 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.food_detection);
 
         inputImageView = findViewById(R.id.imageView);
-        pageTitle = findViewById(R.id.page_title);
         imgSampleOne = findViewById(R.id.imgSampleOne);
         imgSampleTwo = findViewById(R.id.imgSampleTwo);
         captureImageFab = findViewById(R.id.captureImageFab);
@@ -83,6 +80,8 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
         DatabaseHandler db = new DatabaseHandler(getBaseContext());
         db.deleteAllRecords();
         db.addRecipe(new Recipe(1, "Lazanya", "Tomato, potato, cheese, pasta", "boil the water and cut the cheese"));
+        db.addRecipe(new Recipe(2, "Caprese Salad", "Tomato, mozzarella, fresh basil, butter lettuce, marinated grilled steak, balsamic vinegar, olive oil", "boil the water and cut the cheese"));
+        db.addRecipe(new Recipe(2, "Garden Fresh Tomato Soup", "Tomato, mozzarella, fresh basil, butter lettuce, marinated grilled steak, balsamic vinegar, olive oil", ""));
 
     }
 
@@ -144,9 +143,8 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
         frameLayout.setVisibility(View.VISIBLE);
         listView.setVisibility(View.INVISIBLE);
 
-        // Display capture image
+        // Display image
         inputImageView.setImageBitmap(bitmap);
-        pageTitle.setVisibility(View.INVISIBLE);
 
         // Run ODT and display result
         // Note that we run this in the background thread to avoid blocking the app UI because
@@ -269,10 +267,10 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
 
             // calculate the right font size
             pen.setStyle(Paint.Style.FILL_AND_STROKE);
-            pen.setColor(Color.YELLOW);
+            pen.setColor(Color.GREEN);
             pen.setStrokeWidth(2F);
 
-            pen.setTextSize(96F);
+            pen.setTextSize(85F);
             pen.getTextBounds(result.text, 0, result.text.length(), tagSize);
             Float fontSize = pen.getTextSize() * box.width() / tagSize.width();
 
@@ -287,8 +285,8 @@ public class FoodDetection extends AppCompatActivity implements View.OnClickList
                 margin = 0F;
             }
             canvas.drawText(
-                    result.text, box.left + margin,
-                    box.top + tagSize.height(), pen);
+                    result.text, box.left - 5,
+                    box.top - 5, pen);
         }
         this.detectionResults = new ArrayList<>();
         return outputBitmap;

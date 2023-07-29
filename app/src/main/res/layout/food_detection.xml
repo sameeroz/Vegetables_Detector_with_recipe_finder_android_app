@@ -20,14 +20,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/recipe_search">
 
-        <TextView
-            android:id="@+id/page_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/tv_placeholder"
-            android:textAlignment="center"
-            android:textSize="40sp" />
+
 
         <ImageView
             android:id="@+id/imageView"
@@ -71,7 +64,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/tv_description" />
+        android:text="@string/select_text" />
 
     <LinearLayout
         android:id="@+id/llSampleImage"
@@ -109,7 +102,7 @@
         android:layout_gravity="center|bottom"
         android:layout_margin="16dp"
         android:drawableLeft="@drawable/ic_camera"
-        android:text="@string/tv_take_photo"
+        android:text="@string/take_photo"
         android:textAllCaps="false" />
 
 </RelativeLayout>
