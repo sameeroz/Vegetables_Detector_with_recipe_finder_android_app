@@ -6,6 +6,7 @@
 &nbsp;
 ### First choose a picture or take a picture
 <img src="https://github.com/sameeroz/Vegetables_Detector_with_recipe_finder_android_app/assets/90834112/172a6f96-b483-4693-98f3-0bb7cad87287" width="300" />
+</br>
 &nbsp;
 &nbsp;
 &nbsp;
@@ -14,6 +15,7 @@
 &nbsp;
 &nbsp;
 &nbsp;
+</br>
 ### after search for recipes button clicked, the app searches for all recipes that contain the detected vegetables and show them
 <img src="https://github.com/sameeroz/Vegetables_Detector_with_recipe_finder_android_app/assets/90834112/0911a1da-2775-426a-862a-07e18634ebbd" width="300" />
 
